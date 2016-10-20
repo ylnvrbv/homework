@@ -1,0 +1,55 @@
+h1 {
+    text-transform: uppercase;
+    text-align: left;
+    font-family: "Arial Bold";
+    src: url(fonts/arial_bold.ttf);
+    font-style: normal;
+    font-weight: bolder;
+}
+
+h3 {
+    text-align: justify;
+    font-family: "Arial Bold";
+    src: url(fonts/arial_bold.ttf);
+    font-style: normal;
+    font-weight: bolder;
+}
+
+ul {
+    font-family: "Arial Bold";
+    src: url(fonts/arial_bold.ttf);
+    font-weight: normal;
+}
+
+.wrapper {
+    width: 1024px;
+    box-sizing: border-box;
+    margin: auto;
+    padding-left: 263px;
+}
+
+.image {
+    padding-left: 148px;
+    width: 202;
+    height: 202;
+}
+
+.style {
+    border-top: solid 1px #808080;
+}
+
+.number {
+    list-style-type: none;
+}
+
+.link {
+    list-style-type: none;
+}
+
+body {
+    background: url(../img/textured_paper.png)
+}
+
+.feedback {
+    list-style-type: none;
+}
