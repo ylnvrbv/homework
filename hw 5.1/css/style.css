@@ -1,0 +1,85 @@
+@import "reset.css";
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d6010;
+}
+
+.table {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.row {
+    height: 100px;
+}
+
+.row_thin {
+    height: 50px;
+}
+
+
+/*.row__thiner {
+    height: 100px;
+}
+
+.row__thiner_small {
+    height: 50px;
+}*/
+
+.cell {
+    width: 100px;
+    border: 7px solid #000;
+    background-color: #fff;
+}
+
+.cell__red {
+    background-color: #fe5b3d
+}
+
+.cell__yellow {
+    background-color: #fff064
+}
+
+.cell__black {
+    background-color: #2a2d2c;
+}
+
+.cell__blue {
+    background-color: #094785;
+}
+
+.cell__border_top {
+    border-top: 0;
+}
+
+.cell__border_left {
+    border-left: 0;
+}
+
+.cell__border_right {
+    border-right: 0;
+}
+
+.cell__border_bottom {
+    border-bottom: 0;
+}
+
+.cell_view_small {
+    width: 50px;
+}
+
+/*.cell_view_wide {
+    width: 100px;
+}*/
+
+.cell_view_wider01 {
+    width: 150px;
+}
+
+.cell_view_wider {
+    width: 200px;
+}
