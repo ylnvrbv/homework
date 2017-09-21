@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 110px;
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #cccccc;
+}
+
+fieldset {
+    padding: 10px;
+    border: 1px solid #34495e;
+    border-radius: 5px;
+}
+
+fieldset legend {
+    color: #34495e;
+}
+
+.half-width {
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.half-width input {
+    display: none;
+}
+
+.half-width label:not(:first-of-type) {
+    vertical-align: middle;
+    color: #7f8c8d;
+}
+
+.half-width label:not(:first-of-type)::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 3px #bdc3c7;
+}
+
+.half-width label[for^="radio"]::before {
+    border-radius: 50%;
+}
+
+.half-width label:nth-of-type(2)::before {
+    background: #1abc9c;
+    box-shadow: 0 0 0 3px #1abc9c;
+}
+
+.half-width label:nth-of-type(2) {
+    color: #1abc9c;
+}
+
+.half-width label:nth-of-type(4)::before {
+    box-shadow: 0 0 0 3px #ecf0f1;
+}
+
+.half-width label:nth-of-type(4) {
+    color: #ecf0f1;
+}
+
+input[type="text"] {
+    width: 95%;
+    height: 24px;
+    margin-bottom: 10px;
+    padding: 2px 5px;
+    color: #000;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+input:required {
+    border-color: #e74c3c;
+}
+
+input:disabled {
+    color: #bdc3c7;
+    background: #f5f5f5;
+    border-color: #ecf0f1;
+}
+
+input[value*="Неверные данные"]:invalid {
+    color: #c0392b;
+    background: #f2a097;
+    border-color: #e74c3c;
+}
