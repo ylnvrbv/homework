@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
     <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     </script>
@@ -12,26 +13,47 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="nav-menu">
-            <ul class="li"></ul>
-            <ul class="li"></ul>
-            <ul class="li"></ul>
-            <ul class="li"></ul>
-            <ul class="li"></ul>
+    <nav class="header">
+        <ul class="main-menu">
+            <li><a href="#meu youbike">Meu YouBike</a></li>
+            <li><a href="#vender">Vender</a></li>
+            <li><a href="#forum">Forum</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#ajuda">Ajuda</a></li>
+            <li>
+                <a href="#">
+                    <img src="img/offers-icon.png" alt="flag.png">
+                    <span>Minhas Ofertas</span>
+                </a>
+            </li>
+            <li>
+                <span>&nbsp;Ola!&nbsp;</span>
+                <a href="#">Entrar</a>
+                <span>&nbsp;ou&nbsp;</span>
+                <a href="#">Cadastre-se</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="main">
+        <div class="form_header">
+            <h1>Cadastre-se</h1>
         </div>
-        <div class="offers">
-        </div>
-        <div class="login_bar">
-        </div>
-    </div>
-    <div class="wrapper">
-        <div>
-            <h2>Cadastre-se</h2>
-        </div>
+        <div class="form-header-separator"></div>
         <div class="form">
+            <fieldset>
+                <div class="button">
+                    <a href="#facebook"></a>
+                </div>
+                <div class="form_content">
+                    <input type="text" name="first_name" placeholder="First name" required>
+                    <input type="text" name="last_name" placeholder="Last name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Confirm password" required>
+                </div>
         </div>
-    </div>
+        </fieldset>
+    </main>
 </body>
 
 </html>

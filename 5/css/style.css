@@ -1,7 +1,153 @@
 body {
-    background: url("../img/background.png") no-repeat center center fixed;
+    background: url("../img/background.png") center center no-repeat fixed;
     background-size: cover;
+    font-family: 'Lato', Tahoma, sans-serif;
 }
-.header{
-	
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    background: #fff url("../img/pattern-bg.jpg")0 0 repeat;
+    width: 100%;
+}
+
+.main-menu {
+    font-size: 0;
+    padding-right: 20px;
+}
+
+.main-menu li {
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    color: #60b5ed;
+}
+
+.main-menu li:nth-of-type(-n+5):hover {
+    background-color: #4eabda;
+    color: #fefefe;
+}
+
+.main-menu a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 15px 10px;
+}
+
+.main-menu li:nth-of-type(5):after {
+    content: "";
+    height: 36px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-left: 1px solid #56a2dc;
+}
+
+.main-menu li:nth-of-type(6) span {
+    padding-left: 28px;
+}
+
+.main-menu img {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    bottom: 0;
+    margin: auto;
+}
+
+.main-menu li:nth-last-child(-n+2):hover {
+    background: linear-gradient(to bottom, #51b1dc, #2a7ab5);
+    color: #f7f7f7;
+}
+
+.main-menu li:last-of-type span {
+    font-size: 14px;
+}
+
+.main-menu li:last-of-type {
+    padding: 15px 10px;
+    color: #fff;
+}
+
+.main-menu li:last-of-type a {
+    display: inline;
+    padding: 0;
+}
+
+
+
+
+/*.form_header {
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid;
+    width: 560px;
+    height: 62px;
+}*/
+
+
+/*.form_header,
+.form {
+    background-color: rgba(0, 0, 0, 0.63);
+    color: #4c4c4c;
+}*/
+
+
+/*.form_header:first-of-type h1 {
+    line-height: 62px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.form {
+    border: 1px solid;
+    padding: 0 142px;
+    width: 560px;
+    height: 545px;
+    margin: auto;
+    margin-top: 5px;
+
+}
+
+.form_content {
+    display: inline-block;
+}*/
+
+.main {
+    width: 560px;
+    height: 613px;
+    position: fixed;
+    margin-left: -280px;
+    left: 50%;
+    overflow: hidden;
+}
+
+.form_header {
+    margin-top: 2px;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #fefefe;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.form-header-separator {
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+}
+
+.form {
+    background-color: rgba(0, 0, 0, 0.63);
+    height: 549px;
+}
+
+.form_content {
+    display: inline-block;
 }

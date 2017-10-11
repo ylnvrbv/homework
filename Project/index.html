@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/bootstrap-slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/css/bootstrap-slider.css" />
+    <script src="js/script.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mountain's life</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li class="menu__item"><a class="menu__link" href="#main">Главная</a></li>
+                <li class="menu__item"><a class="menu__link" href="#about_us">О нас</a></li>
+                <li class="menu__item"><a class="menu__link" href="#route">Маршруты</a></li>
+                <li class="menu__item"><a class="menu__link" href="#shedule">Расписание походов</a></li>
+                <li class="menu__item"><a class="menu__link" href="#instructors">Инструкторы</a></li>
+                <li class="menu__item"><a class="menu__link" href="#rent">Прокат</a></li>
+                <li class="menu__item"><a class="menu__link" href="#reviews">Отзывы</a></li>
+                <li class="menu__item"><a class="menu__link" href="#useful_information">Полезная информация</a></li>
+                <li class="menu__item"><a class="menu__link" href="#answers/questions">Вопросы/Ответы</a></li>
+                <li class="menu__item"><a class="menu__link" href="#news">Новости</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <main class="clearfix">
+            <div class="topic clearfix">
+                <h1 class="topic__title">Маршруты</h1>
+                <div class="wrapper-search-list">
+                    <select class="topic__search-list" name="sort" size="1">
+                        <option value="closest">Самые ближайшые</option>
+                        <option value="cheap">Самые дешевые</option>
+                        <option value="profi">Самые крутые</option>
+                        <option value="winter">Зима</option>
+                        <option value="summer">Лето</option>
+                    </select>
+                    <span class="arrow__search"></span>
+                </div>
+            </div>
+            <div class="left-side">
+                <form class="filter" action="/echo" method="post">
+                    <fieldset>
+                        <label for="daterange">Дата</label>
+                        <input type="text" name="daterange" />
+                        <label for="search">Место проведения</label>
+                        <input class="test" type="search" name="search" value="Кавказ">
+                        <label for="amount">Количество дней</label>
+                        <input type="number" min="1" id="amount" name="amount" placeholder="Выберите количество">
+                        <label for="price">Цена</label>
+                        <input id="ex2" type="text" name="price" class="span2" value="" data-slider-min="100" data-slider-max="1800" data-slider-step="10" data-slider-value="[100,1300]" />
+                        <span class="price-value">100</span>
+                        <span class="price-value max">1800</span>
+                    </fieldset>
+                    <fieldset class="complexity">
+                        <h3 class="complexity__title">Сложность</h3>
+                        <input type="radio" id="veryEasy" name="difficulty">
+                        <label for="veryEasy">1</label>
+                        <input type="radio" id="easy" name="difficulty" checked>
+                        <label for="easy">2</label>
+                        <input type="radio" id="middle" name="difficulty">
+                        <label for="middle">3</label>
+                        <input type="radio" id="hard" name="difficulty">
+                        <label for="hard">4</label>
+                        <input type="radio" id="veryHard" name="difficulty">
+                        <label for="veryHard">5</label>
+                    </fieldset>
+                </form>
+                <div class="ads">
+                    <a href="#" target="_blank" rel="noopener"><img class="ads__pic" src="img/advertisement.png"></a>
+                </div>
+                <div class="tour">
+                    <div class="tour__title">Направление Походов</div>
+                    <div class="tour__map"></div>
+                </div>
+                <div class="panel-heading" role="tab">
+                    <ul class="countries">
+                        <li class="countries__item">
+                            <span>Болгария</span>
+                            <span class="arrow"></span>
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Исландия
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Карпаты
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Румыния
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Чорногория
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Кипр
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Тянь-Шань
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Марокко
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Норвегия
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Турция
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Таджикистан
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Мексика
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Корсика
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Памир
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Урал
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Абхазия
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Грузия
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Кавказ
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Танзания
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Непал
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Перу
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Канарские острова
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Реюньон
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Аргентина
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Боливия
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="countries__item">
+                            <span class="arrow"></span> Чили
+                            <ul class="countries__submenu">
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 1</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 2</a></li>
+                                <li class="countries__submenu__item"><a class="countries__submenu__link" href="">submenu link 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-side">
+                <h3 class="month">Март 2016</h3>
+                <div class="route clearfix">
+                    <div class="route__photo">
+                        <img src="img/mountain.png" alt="mountain">
+                    </div>
+                    <div class="route__info clearfix">
+                        <div class="route__details">
+                            <h3 class="route__name">Зимний поход на Поп-Иван Чорногорский</h3>
+                            <span class="route__date">19.02.16&nbsp;-&nbsp;21.02.16</span>
+                            <article class="route__description">
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Продолжительность:</li>
+                                    <li class="route__description__cell last-cell">3 дня(2 ночи)</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Длина похода:</li>
+                                    <li class="route__description__cell last-cell">20км</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell"><span class="route__difficulty">Сложность:</span></li>
+                                    <li class="route__description__cell last-cell">1&nbsp;2&nbsp;3&nbsp;<span class="four">4</span>&nbsp;5</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="route__price-details">
+                        <div class="route__price ">$1200</div>
+                        <a href="#" class="route__more">Подробнее</a>
+                    </div>
+                </div>
+                <div class="route clearfix">
+                    <div class="route__photo">
+                        <img src="img/mountain.png" alt="mountain">
+                    </div>
+                    <div class="route__info clearfix">
+                        <div class="route__details">
+                            <h3 class="route__name">Зимний поход на Поп-Иван Чорногорский</h3>
+                            <span class="route__date">19.02.16&nbsp;-&nbsp;21.02.16</span>
+                            <article class="route__description">
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Продолжительность:</li>
+                                    <li class="route__description__cell last-cell">3 дня(2 ночи)</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Длина похода:</li>
+                                    <li class="route__description__cell last-cell">20км</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell"><span class="route__difficulty">Сложность:</span></li>
+                                    <li class="route__description__cell last-cell">1&nbsp;2&nbsp;3&nbsp;<span class="four">4</span>&nbsp;5</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="route__price-details">
+                        <div class="route__price ">$1200</div>
+                        <a href="#" class="route__more">Подробнее</a>
+                    </div>
+                </div>
+                <div class="route clearfix">
+                    <div class="route__photo">
+                        <img src="img/mountain.png" alt="mountain">
+                    </div>
+                    <div class="route__info clearfix">
+                        <div class="route__details">
+                            <h3 class="route__name">Зимний поход на Поп-Иван Чорногорский</h3>
+                            <span class="route__date">19.02.16&nbsp;-&nbsp;21.02.16</span>
+                            <article class="route__description">
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Продолжительность:</li>
+                                    <li class="route__description__cell last-cell">3 дня(2 ночи)</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Длина похода:</li>
+                                    <li class="route__description__cell last-cell">20км</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell"><span class="route__difficulty">Сложность:</span></li>
+                                    <li class="route__description__cell last-cell">1&nbsp;2&nbsp;3&nbsp;<span class="four">4</span>&nbsp;5</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="route__price-details">
+                        <div class="route__price ">$1200</div>
+                        <a href="#" class="route__more">Подробнее</a>
+                    </div>
+                </div>
+                <h3 class="month">Март 2016</h3>
+                <div class="route clearfix">
+                    <div class="route__photo">
+                        <img src="img/mountain.png" alt="mountain">
+                    </div>
+                    <div class="route__info clearfix">
+                        <div class="route__details">
+                            <h3 class="route__name">Зимний поход на Поп-Иван Чорногорский</h3>
+                            <span class="route__date">19.02.16&nbsp;-&nbsp;21.02.16</span>
+                            <article class="route__description">
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Продолжительность:</li>
+                                    <li class="route__description__cell last-cell">3 дня(2 ночи)</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Длина похода:</li>
+                                    <li class="route__description__cell last-cell">20км</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell"><span class="route__difficulty">Сложность:</span></li>
+                                    <li class="route__description__cell last-cell">1&nbsp;2&nbsp;3&nbsp;<span class="four">4</span>&nbsp;5</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="route__price-details">
+                        <div class="route__price ">$1200</div>
+                        <a href="#" class="route__more">Подробнее</a>
+                    </div>
+                </div>
+                <div class="route clearfix">
+                    <div class="route__photo">
+                        <img src="img/mountain.png" alt="mountain">
+                    </div>
+                    <div class="route__info clearfix">
+                        <div class="route__details">
+                            <h3 class="route__name">Зимний поход на Поп-Иван Чорногорский</h3>
+                            <span class="route__date">19.02.16&nbsp;-&nbsp;21.02.16</span>
+                            <article class="route__description">
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Продолжительность:</li>
+                                    <li class="route__description__cell last-cell">3 дня(2 ночи)</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Длина похода:</li>
+                                    <li class="route__description__cell last-cell">20км</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell"><span class="route__difficulty">Сложность:</span></li>
+                                    <li class="route__description__cell last-cell">1&nbsp;2&nbsp;3&nbsp;<span class="four">4</span>&nbsp;5</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="route__price-details">
+                        <div class="route__price ">$1200</div>
+                        <a href="#" class="route__more">Подробнее</a>
+                    </div>
+                </div>
+                <div class="route clearfix">
+                    <div class="route__photo">
+                        <img src="img/mountain.png" alt="mountain">
+                    </div>
+                    <div class="route__info clearfix">
+                        <div class="route__details">
+                            <h3 class="route__name">Зимний поход на Поп-Иван Чорногорский</h3>
+                            <span class="route__date">19.02.16&nbsp;-&nbsp;21.02.16</span>
+                            <article class="route__description">
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Продолжительность:</li>
+                                    <li class="route__description__cell last-cell">3 дня(2 ночи)</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell">Длина похода:</li>
+                                    <li class="route__description__cell last-cell">20км</li>
+                                </ul>
+                                <ul class="route__description__row">
+                                    <li class="route__description__cell"><span class="route__difficulty">Сложность:</span></li>
+                                    <li class="route__description__cell last-cell">1&nbsp;2&nbsp;3&nbsp;<span class="four">4</span>&nbsp;5</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="route__price-details">
+                        <div class="route__price ">$1200</div>
+                        <a href="#" class="route__more">Подробнее</a>
+                    </div>
+                </div>
+                <script>
+                document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+                </script>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
