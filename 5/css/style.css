@@ -1,5 +1,5 @@
 body {
-    background: url("../img/background.png") center center no-repeat fixed;
+    background: url("../img/background.png") no-repeat ;
     background-size: cover;
     font-family: 'Lato', Tahoma, sans-serif;
 }
