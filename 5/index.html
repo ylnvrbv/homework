@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
     <script>
@@ -11,8 +12,7 @@
     </script>
     <title>Meu YouBike</title>
 </head>
-
-<body>
+<body class="page">
     <nav class="header">
         <ul class="main-menu">
             <li><a href="#meu youbike">Meu YouBike</a></li>
@@ -34,25 +34,38 @@
             </li>
         </ul>
     </nav>
-    <main class="main">
-        <div class="form_header">
-            <h1>Cadastre-se</h1>
-        </div>
-        <div class="form-header-separator"></div>
-        <div class="form">
-            <fieldset>
-                <div class="button">
-                    <a href="#facebook"></a>
-                </div>
-                <div class="form_content">
-                    <input type="text" name="first_name" placeholder="First name" required>
-                    <input type="text" name="last_name" placeholder="Last name" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <input type="password" name="password" placeholder="Password" required>
-                    <input type="password" name="password" placeholder="Confirm password" required>
-                </div>
-        </div>
-        </fieldset>
+    <main>
+        <div class="login-section">
+            <h1 class="login-section__header">Cadastre-se</h1>
+            <div class="login-section__body">
+                <a href="#" class="fb-button">
+                    <span class="fa fa-facebook" aria-hidden="true" ></span>
+                        <span>Log In&nbsp;</span>
+                        with&nbsp;
+                        <span>Facebook</span>                                
+                    </a>
+                <p class="separator">OU</p>
+                <form class="form_content">
+                    <input type="text" name="first_name" placeholder="First name" autofocus tabindex="1" required>
+                    <input type="text" name="last_name" placeholder="Last name" tabindex="2" required>
+                    <input type="email" name="email" placeholder="Email Address" tabindex="3" required>
+                    <input type="password" name="password" placeholder="Password" tabindex="4" required>
+                    <input type="password" name="password" placeholder="Confirm password" tabindex="5" required>
+                    <!--  <input type="checkbox" name="subscribe" id="subscribe-field">
+                    <label for="subscribe-field">Send me Youbike updates and tips</label> -->
+                    <!-- <label><input type="checkbox" name="subscribe">Send me Youbike updates and tips</label> -->
+                    <div class="checkbox-wrapper">
+                    <label for="subscribe">
+                        <input id='subscribe' type="checkbox" /> Send me Youbike updates and tips
+                    </label>
+                    </div>
+                </form>
+          
+                <input type="button" value="Create my Account">
+                <p class="terms">
+                    By clicking the button above, you agree to the Terms of Service Xiew our Privacy Policy.
+                </p>
+            </div>
     </main>
 </body>
 
