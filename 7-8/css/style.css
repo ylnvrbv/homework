@@ -28,23 +28,20 @@
 }
 
 .header-page {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin: auto;
     padding-bottom: 10.75rem;
     padding-top: 4.25rem;
-    width: 100%;
+    width: 60rem;
 }
 
 .site-logo {
     color: #fff;
     font-size: 3rem;
     font-family: 'League Gothic';
+    float: left;
     text-decoration: none;
     text-transform: uppercase;
-    /*text-shadow: 1px 1px 3px #a8969a;*/
-    margin-right: 12rem;
-    margin-left: 17rem;
+    width: 9.875rem;
 }
 
 .site-logo__accent {
@@ -54,20 +51,23 @@
 }
 
 .menu {
-    align-items: center;
-    display: flex;
+    float: right;
     font-size: 1.45rem;
     font-family: 'League Gothic';
-    flex-direction: row;
+    width: 38.75rem;
 }
 
-.header-menu li:last-of-type {
-    padding-right: 0;
+.menu-item:last-of-type {
+    margin-right: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 3rem;
 }
 
 .menu-item__link {
     color: #fff;
-    margin-right: 3rem;
     text-decoration: none;
     text-transform: uppercase;
     text-shadow: 2px 1px 3px #8d8285;
@@ -79,16 +79,18 @@
 }
 
 .substrate-slider {
-    /*height: 25rem;*/
     padding-bottom: 9.5rem;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .slider {
-    background: rgba(0, 0, 0, 0.2);
+    width: 60rem;
+    margin: auto;
     display: flex;
     justify-content: center;
     flex-direction: row;
     height: 24.5rem;
+    position: relative;
 }
 
 .slider__large-title {
@@ -110,10 +112,9 @@
 }
 
 .slider-content {
-    margin-left: 13rem;
     margin-top: 2.5rem;
     margin-right: 10rem;
-    position: relative;
+    /*position: relative;*/
     width: 30rem;
     height: auto;
 }
@@ -133,16 +134,12 @@
 .slider-image {
     top: -1.5rem;
     position: relative;
-    right: 5rem;
 }
 
 .slider__nav {
-    bottom: 5rem;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row-reverse;
-    position: relative;
-    right: 17rem;
+    position: absolute;
+    bottom: -5rem;
+    right: 8.5rem;
 }
 
 .substrate__color_gradient {
@@ -155,16 +152,17 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
+    padding-top: 5rem;
 }
 
 .first-cell,
-.second-cell{
-  margin-right: 5rem;
+.second-cell {
+    margin-right: 5rem;
 }
 
 .cell-title {
-    font-size: 1.55rem;
     color: #fff;
+    font-size: 1.55rem;
     font-family: 'League Gothic', Arial, sans-serif;
     letter-spacing: 0.0625rem;
     text-shadow: 1px 1px 1px #0F1518;
@@ -173,18 +171,18 @@
 
 .cell {
     width: 15rem;
-    height: 12rem;
+    height: 14rem;
 }
 
 .description-company {
-    font-size: 1rem;
     color: #fff;
+    font-size: 1rem;
     font-family: "Open Sans Light", Tahoma, sans-serif;
     overflow: hidden;
-    word-wrap: normal;
     line-height: 1.5;
     margin-top: .5rem;
     max-height: 7.5rem;
+    word-wrap: normal;
 }
 
 .more-info {
