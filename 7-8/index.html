@@ -6,6 +6,8 @@
     <title>Pingbuller</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     </script>
@@ -14,99 +16,170 @@
 <body class="page">
     <div class="substrate">
         <div class="wrapper-header-page">
-            <header class="header-page clearfix">
-                <a href="#" class="site-logo">pingbull<span class="site-logo__accent">er</span></a>
+            <header class="header-page">
+                <span href="#" class="site-logo">pingbull<span class="site-logo__accent">er</span></span>
                 <ul class="menu header__menu">
-                    <li class="menu-item"><a class="menu-item__link" href="#">home</a></li>
-                    <li class="menu-item"><a class="menu-item__link" href="#">about</a></li>
-                    <li class="menu-item"><a class="menu-item__link" href="#">blog</a></li>
-                    <li class="menu-item"><a class="menu-item__link" href="#">products</a></li>
-                    <li class="menu-item"><a class="menu-item__link" href="#">lorem ipsum</a></li>
-                    <li class="menu-item"><a class="menu-item__link" href="#">dolor sit amet</a></li>
+                    <li class="menu-item" id="menu-main-item"><a class="menu-item__link" href="#">Menu</a></li>
+                    <div class="menu-list">
+                        <li class="menu-item"><a class="menu-item__link" href="#">home</a></li>
+                        <li class="menu-item"><a class="menu-item__link" href="#">about</a></li>
+                        <li class="menu-item"><a class="menu-item__link" href="#">blog</a></li>
+                        <li class="menu-item"><a class="menu-item__link" href="#">products</a></li>
+                        <li class="menu-item"><a class="menu-item__link" href="#">lorem ipsum</a></li>
+                        <li class="menu-item"><a class="menu-item__link" href="#">dolor sit amet</a></li>
+                    </div>
                 </ul>
             </header>
             <div class="substrate-slider">
-                <div class="slider">
-                    <!-- <a class="slider-button left-button" href=""></a> -->
-                    <div class="slider-content">
-                        <h1 class="slider__large-title">Lorem Ipsum Dolor</h1>
-                        <h2 class="slider__small-title">it will make all of your dreams come true</h2>
-                        <p class="content">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobotris.</p>
+                <div class="wrapper-slider">
+                    <div class="slider">
+                        <!-- <a class="slider-button left-button" href=""></a> -->
+                        <div class="slider-content">
+                            <h1 class="slider__large-title">Lorem Ipsum Dolor</h1>
+                            <h2 class="slider__small-title">it will make all of your dreams come true</h2>
+                            <p class="content">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobotris.</p>
+                        </div>
+                        <div class="slider-image">
+                            <img class="large-phone" src="img/iphone.png" alt="iphone">
+                            <img class="small-phone" src="img/iphone-small.png" alt="iphone">
+                        </div>
+                        <!-- <a class="slider-button right-button" href="#"></a> -->
+                        <div class="slider__nav">
+                            <a href=""><img src="img/marker2.png"></a>
+                        </div>
                     </div>
-                    <div class="slider-image">
-                        <img src="img/iphone.png" alt="iphone">
+                </div>
+            </div>
+            <div class="substrate__color_gradient">
+                <div class="first-section">
+                    <div class="cell first-cell">
+                        <h1 class="cell-title">About our company</h1>
+                        <p class="description-company">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar
+                        bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu
+                        quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+                        <a class="more-info" href="#"><span>read more</span></a>
                     </div>
-                    <!-- <a class="slider-button right-button" href="#"></a> -->
-                    <div class="slider__nav">
-                        <a href=""><img src="img/marker2.png"></a>
+                    <div class="cell second-cell">
+                        <h1 class="cell-title">About our company</h1>
+                        <p class="description-company">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar
+                        bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu
+                        quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                        </p>
+                        <a class="more-info" href="#"><span>read more</span></a>
+                    </div>
+                    <div class="cell third-cell">
+                        <h1 class="cell-title">About our company</h1>
+                        <p class="description-company">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar
+                        bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu
+                        quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                        </p>
+                        <a class="more-info" href="#"><span>read more</span></a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="substrate__color_gradient">
-            <div class="first-section">
-                <div class="cell first-cell">
-                    <h1 class="cell-title">About our company</h1>
-                    <p class="description-company">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam</p>
-                    <a class="more-info" href="#"><span>read more</span></a>
+            <div class="second-section">
+                <div class="second-section__wrapper">
+                    <div class="reviews">
+                        <div class="reviews-flag">
+                            <img class="user-photo" src="img/user-photo.png">
+                            <h1 class="review-title">pingbuller<span>starts here</span></h1>
+                            <p class="review-article">“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”</p>
+                            <img class="marker" src="img/marker.png">
+                        </div>
+                    </div>
+                    <div class="blog-posts">
+                        <h1 class="blog__title">recent updates</h1>
+                        <div class="post">
+                            <img src="img/post1.png" alt="" class="post__icon">
+                            <div class="post__body">
+                                <h3 class="post__title">
+	                        		<a class="post__link" href="">Nunc turpis neque feugiat eget</a>
+	                    	</h3>
+                                <p class="post__text">Posted by Admin on March 13 2012 in Recent News</p>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <img src="img/post2.png" alt="" class="post__icon">
+                            <div class="post__body">
+                                <h3 class="post__title">
+	                        	<a class="post__link" href="">Nunc turpis neque feugiat eget</a>
+	                        </h3>
+                                <p class="post__text">Posted by Admin on March 13 2012 in Category</p>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <img src="img/post3.png" alt="" class="post__icon">
+                            <div class="post__body">
+                                <h3 class="post__title">
+                        		<a class="post__link" href="">Nunc turpis neque feugiat eget</a>
+                        	</h3>
+                                <p class="post__text">Posted by Admin on March 13 2012 in Blog Updates</p>
+                            </div>
+                        </div>
+                        <p href="update__more-info">
+                            <a class="read-more" href="">read more here</a>
+                        </p>
+                    </div>
                 </div>
-                <div class="cell second-cell">
-                    <h1 class="cell-title">About our company</h1>
-                    <p class="description-company">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
-                    </p>
-                    <a class="more-info" href="#"><span>read more</span></a>
+            </div>
+            <div class="third-section">
+                <div class="b-logos">
+                    <div class="b-logos__item">
+                        <a href="" class="b-logos__link b-logos__link_bilabong"></a>
+                    </div>
+                    <div class="b-logos__item">
+                        <a href="" class="b-logos__link b-logos__link_dc"></a>
+                    </div>
+                    <div class="b-logos__item">
+                        <a href="" class="b-logos__link b-logos__link_tree"></a>
+                    </div>
+                    <div class="b-logos__item">
+                        <a href="" class="b-logos__link b-logos__link_awsm"></a>
+                    </div>
+                    <div class="b-logos__item">
+                        <a href="" class="b-logos__link b-logos__link_raca"></a>
+                    </div>
+                    <div class="b-logos__item">
+                        <a href="" class="b-logos__link b-logos__link_vonzipper"></a>
+                    </div>
                 </div>
-                <div class="cell third-cell">
-                    <h1 class="cell-title">About our company</h1>
-                    <p class="description-company">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam
-                    </p>
-                    <a class="more-info" href="#"><span>read more</span></a>
+            </div>
+            <div class="four-section">
+                <div class="four-section__wrapper">
+                    <div class="f-s__first column">
+                        <a class="site-logo f-s__site-logo">Pingbull<span class="f-s__site-logo__accent">er</span></a>
+                        <h2 class="f-s__news-title f-s__news-title_mobile">news categories</h2>
+                        <p class="f-s__copyright">copyright 2013, Pingbull AS</p>
+                        <p class="f-s__text">
+                            Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
+                        </p>
+                    </div>
+                    <div class="f-s__second column">
+                        <h2 class="f-s__news-title">recent comments</h2>
+                        <p class="f-s__text ">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+                    </div>
+                    <div class="f-s__third column">
+                        <h2 class="f-s__news-title">news categories</h2>
+                        <p class="f-s__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="second-section">
-            <div class="reviews">
-                <img src="img/user-photo.png">
-                <img src="img/review.png">
-                <h1>pingbuller <b>starts here</b></h1>
-                <p>“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”</p>
+            </section>
+            <div class="substrate-footer">
+                <footer class="page-footer">
+                    <nav class="footer-nav">
+                        <ul class="menu footer-menu">
+                            <li class="footer-menu__item"><a class="footer-menu-item__link" href="#">home</a></li>
+                            <li class="footer-menu__item"><a class="footer-menu-item__link" href="#">about</a></li>
+                            <li class="footer-menu__item"><a class="footer-menu-item__link" href="#">blog</a></li>
+                            <li class="footer-menu__item"><a class="footer-menu-item__link" href="#">products</a></li>
+                            <li class="footer-menu__item"><a class="footer-menu-item__link" href="#">lorem ipsum</a></li>
+                            <li class="footer-menu__item"><a class="footer-menu-item__link" href="#">dolor sit amet</a></li>
+                        </ul>
+                    </nav>
+                    <p class="copyright">Designed by <span class="copyright__accent">Pingbull AS</span></p>
+                </footer>
             </div>
-            <a href="#"><img src="img/marker.png"></a>
-        </div>
-        <div class="third-section">
-            <img src="img/brands.png" alt="brands">
-        </div>
-        <div class="four-section">
-            <div class="f-s__first-column">
-                <h1>pigbuller</h1>
-                <i>copyright 2013, Pingbull AS</i>
-                <p>
-                    Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pul-
-                </p>
-            </div>
-            <div class="f-s__second-column">
-                <h2>recent comments</h2>
-                <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis</p>
-            </div>
-        </div>
-        <div class="f-s__third-column">
-            <h2>news categories</h2>
-            <p>Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis</p>
-        </div>
-        </section>
-        <footer>
-            <nav class="menu footer--menu">
-                <ul>
-                    <li>home</li>
-                    <li>about</li>
-                    <li>blog</li>
-                    <li>products</li>
-                    <li>lorem ipsum</li>
-                    <li>dolor sit amet</li>
-                </ul>
-            </nav>
-            <span>Designed by <b>Pingbull AS</b></span>
-        </footer>
 </body>
 
 </html>
